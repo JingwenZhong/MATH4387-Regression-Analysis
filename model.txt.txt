@@ -1,0 +1,45 @@
+﻿//user inputs
+y0 = initial investments
+a = current age
+t = retirement age
+d = expected age of death
+w = annual net income
+r = expected annual return on investments
+s = standard deviation of return on investments
+f = inflation rate
+
+
+//random variable for investment return
+I ~ N(r,s)
+
+
+//function for deposits (before retirement)
+/*need to come up with a function that determines amount to deposit annually. Possibly a function that calculates an “ideal” scenario, would be a linear model, calculates how far off we are from that ideal function, and adjusts deposits accordingly*/
+
+
+//function for spending (after retirement)
+/*similarly, a function that calculates ideal scenario, calculate how far off, adjust spending accordingly*/
+
+
+//calculate age intervals
+yearsWorking = r - a
+yearsRetired = d - r
+
+
+//before retirement model
+for i:yearsWorking
+        y_i = (y_i-1 + I + deposit function) * f
+
+
+//after retirement model
+for i:yearsRetired
+        y_i = (y_i-1 - spending function) * f
+
+
+//Monte Carlo simulation
+N = 5000 (or whatever we decide)
+//run model N times
+/*output expected value, best case scenario (95 percentile outcome), worse case scenario (5 percentile outcome)*/
+
+
+//plot simulation if we choose to
